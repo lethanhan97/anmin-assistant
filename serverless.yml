@@ -1,0 +1,16 @@
+service: sleep-reminder
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: handler.remind
+   events:
+     - httpApi:
+         path: /sleep-early
+         method: get
+     - schedule: cron(0 13 * * ? *) # everyday at 9pm SGT
