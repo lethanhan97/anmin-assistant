@@ -12,7 +12,7 @@ module.exports.remind = async (_) => {
   return api
     .get('/sendMessage', {
       params: {
-        chat_id: chatId,
+        chat_id: env.groupChatId,
         text: message,
         parse_mode: 'html'
       }
