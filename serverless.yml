@@ -14,4 +14,4 @@ functions:
       - httpApi:
           path: /sleep-early
           method: get
-      - schedule: cron(0 13 * * ? *) # everyday at 9pm SGT
+      - schedule: cron(30 15 * * ? *) # everyday at 11.30pm SGT
